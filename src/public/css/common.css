@@ -1,0 +1,23 @@
+header {
+    background-color: #d2d2d2;
+    height: 80px;
+    max-width: 100%;
+}
+
+.header__wrapper {
+    padding: 15px 0 5px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__logo-link {
+    font-size: 30px;
+    text-decoration: none;
+    padding: 0 50px;
+}
+
+.merriweather-header__logo-text {
+
+}
+
