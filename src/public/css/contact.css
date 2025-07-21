@@ -89,6 +89,32 @@
     gap: 90px;
     padding-left: 10px;
     padding-right: 20px;
+    cursor: pointer;
+
+    /* 選択時のスタイル */
+        
+}
+
+.contact-form__radio:checked {
+    background-color: #ffcccc;
+    /* サークル全体の背景色 */
+    border-color: #ff6666;
+    /* 枠線の色を変える */
+}
+
+/* 中央の色を変える（選択時） */
+.contact-form__radio:checked::before {
+    content: '';
+    display: block;
+    width: 12px;
+    /* 中央の円の幅 */
+    height: 12px;
+    background-color: #967474;
+    /* 中央部分の色 */
+    border-radius: 50%;
+    /* 中央部分も円形に */
+    margin: auto;
+    /* 真ん中に配置 */
 }
 
 .span__required {
