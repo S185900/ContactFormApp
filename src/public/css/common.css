@@ -1,23 +1,116 @@
+h1,
+h2,
+h3 {
+    all: unset;
+}
+
+/* --------- ヘッダーがあるページ共通_＊Group 104 --------- */
 header {
-    background-color: #d2d2d2;
-    height: 80px;
-    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #E0DFDE;
+    width: 1512px;
+    height: 100px;
+    max-width: 1509.01px;
 }
 
 .header__wrapper {
-    padding: 15px 0 5px 30px;
+    padding: 0px 27px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .header__logo-link {
-    font-size: 30px;
+    /* font-family: Inika; */
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
     text-decoration: none;
-    padding: 0 50px;
+    padding-left: 2.99px;
+    color: #8B7969;
 }
 
-.merriweather-header__logo-text {
+/* ---------- タイトルがあるページ共通_Contact, Confirm, Admin, Login, Register?? ---------- */
+main {
+    max-width: 1509.01px; /* --- ＊指定 --- */
+}
+
+.top-ttl {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 100%; /* --- ＊指定(1509.01px) --- */
+    width: 121px;
+    height: 46px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.top-ttl__heading {
+    /* font-family: Inika; */
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 35px;
+    position: absolute; /* 絶対配置を指定 */
+    top: 150px;
+    /* padding-bottom: 50px; */
+    padding-left: 694px;
+    color: #8B7969;
+}
+
+
+/* ---------- Contactページ共通ボタン_Frame 14 ---------- */
+.contact-form__button {
+    position: absolute; /* 絶対配置を指定 */
+    top: 630px;
+    /* top: 903px; */
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 380px;
+    /* margin-left: 674px; */
+    margin-bottom: 70px;
+    padding-bottom: 210px;
 
 }
 
+.contact-form__submit {
+    padding: 10px 40px 10px 40px;
+    gap: 10px;
+
+    /* font-family: Inika; */
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    /* color: #8B7969; */
+    background-color: #82756A;
+    
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.footer {
+    position: absolute; /* 絶対配置を指定 */
+    top: 1000px;
+    height: 400px;
+    margin-bottom: 50px;
+}

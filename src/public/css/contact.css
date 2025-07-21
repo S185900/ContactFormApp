@@ -1,0 +1,162 @@
+.contact-form{
+    height: 606px;
+    position: absolute;/* 絶対配置を指定 */
+    top: 247px;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    padding-left: 273px;
+}
+
+.contact-form__form{
+    width: 972px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form__group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 30px;
+}
+
+.contact-form__label {
+    width: 210px; /* Adjust width as necessary */
+    text-align: left;
+    margin-right: 110px;
+    /* font-family: Inika; */
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
+}
+
+.contact-form__radio{
+    margin-right: 7px;
+}
+
+
+.contact-form__input,
+.contact-form__textarea,
+.contact-form__select {
+    flex-grow: 1;
+    background-color: #eeeeee;
+
+}
+
+.contact-form__input{
+    width: 400px;
+    height: 40px;
+    padding:  10px 10px 10px 30px;
+    border: 1px solid #E0DFDE;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form__select {
+    width: 331.68px;
+    height: 40px;
+    padding-left: 25px;
+    border: 1px solid #E0DFDE;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #8B7969;
+}
+
+.contact-form__textarea {
+    width: 950px;
+    height: 150px;
+    padding-left: 30px;
+    padding-top: 20px;
+    border: 1px solid #E0DFDE;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #6b6158;
+    background-color: #eeeeee;
+}
+
+.contact-form__group--gender{
+    padding: 10px 33px 15px 0 ;
+}
+
+
+.contact-form__radios {
+    display: flex;
+    gap: 90px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.span__required {
+    /* Inika */
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #ff8888;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+
+.contact-form__name {
+    display: flex;
+    gap: 30px;
+    width: 620px; /* Adjust width as necessary */
+}
+
+.contact-form__input {
+    width: 400px;
+    /* 他のフォームと同じ幅を指定 */
+    box-sizing: border-box;
+    /* パディングを含めた計算 */
+}
+
+.contact-form__label--message {
+    width: 390px; /* Adjust width as necessary */
+    text-align: left;
+    margin-right: 70px;
+    /* font-family: Inika; */
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
+}
+
+.contact-form__tel {
+    display: flex;
+    gap: 10px;
+    width: 30px;
+    text-align: center;
+}
+
+.tel-line__text {
+    vertical-align: middle;
+    align-items: center;
+    padding-top: 6px;
+    text-align: center;
+}
+
+.contact-form__tel>.contact-form__input {
+    text-align: center;
+    padding-right: 30px;
+    width: 190px;
+
+}
+
+
+.contact-form__group--email>.contact-form__input {
+    padding-left: 30px;
+}
+
+.select-form-placeholder {
+    color: #8B7969;
+    padding-left: 30px;
+}
