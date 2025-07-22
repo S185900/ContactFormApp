@@ -279,6 +279,7 @@ table tr:nth-child(8) {
 }
 
 .confirm-form__submit {
+    display: inline-block;
     padding: 10px 40px 10px 40px;
     gap: 10px;
 

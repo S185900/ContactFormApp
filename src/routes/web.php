@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Auth\AuthController;
 
 
+
 Route::get('/', [ContactController::class, 'create']);
-Route::get('/confirm', [ContactController::class, 'confirm']);
+Route::post('/confirm', [ContactController::class, 'confirm']);
 Route::get('/thanks', [ContactController::class, 'thanks']);

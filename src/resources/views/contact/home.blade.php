@@ -14,7 +14,8 @@
         </h1>
     </div>
     <div class="contact-form">
-        <form class="contact-form__form" action="" method="POST">
+        <!-- action:フォーム内容の送信先を指定 post:送信するとき -->
+        <form class="contact-form__form" action="/confirm" method="post">
             @csrf
             <div class="contact-form__group contact-form__group--name">
                 <label for="last-name" class="contact-form__label">お名前<span class="span__required">※</span></label>
@@ -31,11 +32,11 @@
                         男性
                     </label>
                     <label class="contact-form__radio-label">
-                        <input type="radio" id="gender-female" name="gender" value="2" class="contact-form__radio">
+                        <input type="radio" id="gender-female" name="gender" value="2" class="contact-form__radio" required>
                         女性
                     </label>
                     <label class="contact-form__radio-label">
-                        <input type="radio" id="gender-other" name="gender" value="3" class="contact-form__radio">
+                        <input type="radio" id="gender-other" name="gender" value="3" class="contact-form__radio" required>
                         その他
                     </label>
                 </div>
@@ -47,11 +48,11 @@
             <div class="contact-form__group contact-form__group--tel">
                 <label for="tel" class="contact-form__label">電話番号<span class="span__required">※</span></label>
                 <div class="contact-form__tel">
-                    <input type="tel" id="tel" name="tel" class="contact-form__input" placeholder="080" required>
+                    <input type="tel" id="tel-part1" name="tel[part1]" class="contact-form__input" placeholder="123" required>
                     <span class="tel-line__text">-</span>
-                    <input type="tel" id="tel" name="tel" class="contact-form__input" placeholder="1234" required>
+                    <input type="tel" id="tel-part2" name="tel[part2]" class="contact-form__input" placeholder="456" required>
                     <span class="tel-line__text">-</span>
-                    <input type="tel" id="tel" name="tel" class="contact-form__input" placeholder="5678" required>
+                    <input type="tel" id="tel-part3" name="tel[part3]" class="contact-form__input" placeholder="5678" required>
                 </div>
             </div>
             <div class="contact-form__group contact-form__group--address">
@@ -75,7 +76,7 @@
             </div>
             <div class="contact-form__group  contact-form__group--message">
                 <label for="message" class="contact-form__label contact-form__label--message">お問い合わせ内容<span class="span__required">※</span></label>
-                <textarea id="message" name="message" class="contact-form__textarea" rows="5" required maxlength="120" placeholder="例: お問い合わせ内容をご記載ください"></textarea>
+                <textarea id="message" name="detail" class="contact-form__textarea" rows="5" required maxlength="120" placeholder="例: お問い合わせ内容をご記載ください"></textarea>
             </div>
             <div class="contact-form__button">
                 <button class="contact-form__submit" type="submit">確認画面</button>
