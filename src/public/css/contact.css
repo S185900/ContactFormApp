@@ -1,4 +1,5 @@
-.contact-form{
+.contact-form,
+.confirm-form {
     height: 606px;
     position: absolute;/* 絶対配置を指定 */
     top: 247px;
@@ -8,7 +9,8 @@
     padding-left: 273px;
 }
 
-.contact-form__form{
+.contact-form__form,
+.confirm-form__form {
     width: 972px;
     height: 100%;
     display: flex;
@@ -186,3 +188,210 @@
     color: #8B7969;
     padding-left: 30px;
 }
+
+/* ---------- Confirmページ_確認画面 ---------- */
+
+tr,
+td {
+    background-color: #FFFFFF;
+    border: 1px solid #E0DFDE;
+}
+
+.confirm-form__table,
+td {
+    padding: 10px;
+}
+
+.confirm-form__table__header,
+th {
+    padding: 20px 10px 20px 40px
+}
+
+.confirm-form__table,
+td {
+    padding-left: 30px ;
+}
+
+.input {
+    border: none;
+    width: 530px;
+    padding-left: 10px;
+    font-family: ;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
+}
+
+table tr:nth-child(8) {
+    height: 100px;
+}
+
+/* table tr:nth-child(8) input {
+    height: 100px;
+} */
+
+.textarea {
+    height: 150px;
+    width: 500px;
+    border: none;
+    font-family: ;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
+}
+
+.confirm-form__table__header {
+    font-family: ;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    background-color: #BAA899;
+}
+
+.confirm-form__btn-edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    position: absolute;
+    /* 絶対配置を指定 */
+    top: 630px;
+    /* top: 903px; */
+    width: 500px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 250px;
+    /* margin-left: 674px; */
+    margin-bottom: 70px;
+    padding-bottom: 210px;
+}
+
+.confirm-form__submit {
+    padding: 10px 40px 10px 40px;
+    gap: 10px;
+
+    font-family: ;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    /* color: #8B7969; */
+    background-color: #82756A;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.confirm-form__submit-edit {
+    padding: 10px 40px 10px 40px;
+    gap: 10px;
+    font-family: ;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-decoration: underline solid;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    color: #8B7969;
+}
+
+
+/* ---------- Thank youページ_サンクスページ ---------- */
+
+
+.thank-you {
+    width: 1582px;
+    height: 982px;
+}
+
+.thank-you__background {
+    width: 1381px;
+    height: 365px;
+    top: 319px;
+    left: 66px;
+    position: relative;
+    z-index: 1;
+
+}
+
+.thank-you__image {
+    position: absolute;
+    width: 1381px;
+    height: auto;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 中央に移動 */
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: Regular;
+    /* font-size: 280px; */
+    font-size: 250px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(139, 121, 105, 0.05);
+    z-index: 50;
+}
+
+.thank-you__text {
+    font-weight: 700;
+    font-style: bold;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 完全に中央に揃える */
+    z-index: 51;
+}
+
+
+.thank-you__button {
+    width: 140px;
+    position: relative;
+    height: 46px;
+    top: 555px;
+    left: 686px;
+    z-index: 100;
+}
+
+.thank-you__submit {
+    padding: 10px 40px;
+    gap: 10px;
+    background-color: #82756Af5;
+    border: 1px solid #ccc;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 完全に中央に揃える */
+    z-index: 101;
+}
+
+

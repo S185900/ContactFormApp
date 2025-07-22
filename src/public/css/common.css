@@ -23,7 +23,7 @@ header {
 }
 
 .header__logo-link {
-    /* font-family: Inika; */
+    font-family: "Inika", serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 40px;
@@ -34,6 +34,10 @@ header {
     text-decoration: none;
     padding-left: 2.99px;
     color: #8B7969;
+}
+
+.header__logo-text {
+    font-family: "Inika", serif;
 }
 
 /* ---------- タイトルがあるページ共通_Contact, Confirm, Admin, Login, Register?? ---------- */
@@ -53,7 +57,7 @@ main {
 }
 
 .top-ttl__heading {
-    /* font-family: Inika; */
+    font-family: "Inika", serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 35px;

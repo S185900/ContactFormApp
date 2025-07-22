@@ -8,3 +8,5 @@ use App\Http\Controllers\Auth\AuthController;
 
 
 Route::get('/', [ContactController::class, 'create']);
+Route::get('/confirm', [ContactController::class, 'confirm']);
+Route::get('/thanks', [ContactController::class, 'thanks']);

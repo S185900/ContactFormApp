@@ -11,4 +11,17 @@ class ContactController extends Controller
     {
         return view('contact.home');
     }
+
+
+    public function confirm()
+    {
+        return view('contact.confirm');
+    }
+
+
+    public function thanks()
+    {
+        return view('contact.thanks');
+    }
+
 }
