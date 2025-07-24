@@ -14,55 +14,55 @@
         </h1>
     </div>
     <div class="confirm-form">
-        <form class="confirm-form__form" action="/thanks" method="post">
+        <form class="confirm-form__form" action="/contacts" method="post">
             @csrf
             <table class="confirm-form__table">
                     <tr class="confirm-form__table__row">
                         <th class="confirm-form__table__header">お名前</th>
                         <td class="confirm-form__table__value">
-                            <input class="input" type="text" name="name" value="{{ $contact['name'] }}" readonly />
+                            <input class="input" type="text" name="name" value="{{ old('name', $contact['name']) }}" readonly />
                         </td>
                     </tr>
                     <tr class="confirm-form__table__row">
                         <th class="confirm-form__table__header">性別</th>
                         <td class="confirm-form__table__value">
-                            <input class="input" type="text" name="gender" value="{{ $contact['gender_name'] }}" readonly />
+                            <input class="input" type="text" name="gender" value="{{ old('gender-name', $contact['gender_name']) }}" readonly />
                         </td>
                     </tr>
                     <tr class="confirm-form__table__row">
                         <th class="confirm-form__table__header">メールアドレス</th>
                         <td class="confirm-form__table__value">
-                            <input class="input" type="email" name="email" value="{{ $contact['email'] }}" readonly />
+                            <input class="input" type="email" name="email" value="{{ old('email', $contact['email']) }}" readonly />
                         </td>
                     </tr>
                     <tr class="confirm-form__table__row">
                         <th class="confirm-form__table__header">電話番号</th>
                         <td class="confirm-form__table__value">
-                            <input class="input" type="tel" name="tel" value="{{ $contact['tel'] }}" readonly />
+                            <input class="input" type="tel" name="tel" value="{{ old('tel', $contact['tel']) }}" readonly />
                         </td>
                     </tr>
                     <tr class="confirm-form__table__row">
                         <th class="confirm-form__table__header">電住所</th>
                         <td class="confirm-form__table__value">
-                            <input class="input" type="text" name="address" value="{{ $contact['address'] }}" readonly />
+                            <input class="input" type="text" name="address" value="{{ old('address', $contact['address']) }}" readonly />
                         </td>
                     </tr>
                     <tr class="confirm-form__table__row">
                         <th class="confirm-form__table__header">建物名</th>
                         <td class="confirm-form__table__value">
-                            <input class="input" type="text" name="building" value="{{ $contact['building'] }}" readonly />
+                            <input class="input" type="text" name="building" value="{{ old('building', $contact['building']) }}" readonly />
                         </td>
                     </tr>
                     <tr class="confirm-form__table__row">
                         <th class="confirm-form__table__header">お問い合わせの種類</th>
                         <td class="confirm-form__table__value">
-                            <input class="input" type="text" name="category_id" value="{{ $contact['category_name'] }}" readonly />
+                            <input class="input" type="text" name="category_id" value="{{ old('category_name', $contact['category_name']) }}" readonly />
                         </td>
                     </tr>
                     <tr class="confirm-form__table__row">
                         <th class="confirm-form__table__header">お問い合わせ内容</th>
                         <td class="confirm-form__table__value">
-                            <textarea class="textarea" name="detail" wrap="soft" readonly>{{ $contact['detail'] }}</textarea>
+                            <textarea class="textarea" name="detail" wrap="soft" readonly>{{ old('detail', $contact['detail']) }}</textarea>
                         </td>
                     </tr>
             </table>

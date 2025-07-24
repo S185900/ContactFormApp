@@ -21,10 +21,13 @@
             <div class="thank-you__background">
                 <p class="thank-you__image">Thank you</p>
             </div>
-            <div class="thank-you__content">
-                <p class="thank-you__text">お問い合わせありがとうございました</p>
-                <button class="thank-you__submit" type="submit">HOME</button>
-            </div>
+
+            <form action="{{ route('back.to.contact.home') }}" method="get" class="thank-you__form">
+                <div class="thank-you__content">
+                    <p class="thank-you__text">お問い合わせありがとうございました</p>
+                    <button class="thank-you__submit" type="submit">HOME</button>
+                </div>
+            </form>
         </section>
     </main>
     <footer>

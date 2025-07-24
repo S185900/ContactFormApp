@@ -9,7 +9,6 @@ class Contact extends Model
 {
     use HasFactory;
 
-    protected $table = 'contacts'; // テーブル名
     protected $fillable = [ // 操作可能なカラム
         'category_id',
         'first_name',

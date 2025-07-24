@@ -1,7 +1,8 @@
 .contact-form,
 .confirm-form {
-    height: 606px;
-    position: absolute;/* 絶対配置を指定 */
+    /* min-height: 606px;最低高さ確保 */
+    height: auto;/* コンテンツに応じて高さを伸ばす */
+    position: absolute;
     top: 247px;
     display: flex;
     text-align: left;
@@ -161,7 +162,8 @@
 .contact-form__tel {
     display: flex;
     gap: 10px;
-    width: 30px;
+    width: 620px;
+    /* 1つ目の入力欄〜３つ目の入力欄までの幅になる */
     text-align: center;
 }
 
@@ -396,3 +398,9 @@ table tr:nth-child(8) {
 }
 
 
+.error-message {
+    color: #ff8888;
+    font-size: 0.875rem;
+    text-align: right;
+    padding-bottom: 15px;
+}
