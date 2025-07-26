@@ -14,7 +14,13 @@ Route::post('/contacts', [ContactController::class, 'store']); // 動作だけ�
 Route::get('/thanks', [ContactController::class, 'thanks']);
 Route::get('/', [ContactController::class, 'create'])->name('back.to.contact.home');
 
+// 管理画面にデータ取得
+Route::get('/dashboard', [AdminController::class, 'getContacts']);
 
 
-Route::get('/confirm', [ContactController::class, 'con']);
+Route::view('/dashboard', 'admin.dashboard');
+
+Route::view('/login', 'auth.login');
+
+Route::view('/register', 'auth.register');
 

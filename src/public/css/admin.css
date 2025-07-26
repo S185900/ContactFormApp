@@ -1,0 +1,372 @@
+
+
+
+.dashboard-form {
+    max-width: 1183px;
+    position: absolute;
+    top: 215px;
+    left: 164px;
+}
+
+.dashboard-form__form {
+    display: flex;
+    height: 50px;
+    width: 1183px;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0 20px; */
+    /* オプションで余白を追加 */
+    /* background-color: #fdffbb; */
+    /* 目安の背景カラー：後で消す */
+}
+
+.dashboard-table__container {
+    padding-top: 30px;
+}
+
+.dashboard-form__group--input-text { /* 親要素*/
+    /* width: 100%; */
+    padding-right: 20px;
+}
+
+.input {
+    padding: 12px;
+    padding-left: 20px;
+    /* text-align: center; */
+    width: 350px;
+    font-family: "Inika";
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #BEB1A6;
+    background-color: #FBFBFB;
+    border: 1px solid #E3DED9;
+}
+
+.dashboard-form__group--select-gender {/* 親要素*/
+    /* width: 100%; */
+    padding-right: 20px;
+}
+
+.dashboard-form__select--gender {
+    padding: 10px;
+    text-align: center;
+    width: 90px;
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 17px;
+        line-height: 100%;
+        letter-spacing: 0%;
+
+        color: #BEB1A6;
+            background-color: #FBFBFB;
+            border: 1px solid #E3DED9;
+}
+
+.dashboard-form__group--select-categories {/* 親要素*/
+    /* width: 100%; */
+    padding-right: 20px;
+}
+.dashboard-form__select--categories {
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 17px;
+        line-height: 100%;
+        letter-spacing: 0%;
+
+        color: #BEB1A6;
+            background-color: #FBFBFB;
+            border: 1px solid #E3DED9;
+
+}
+
+.dashboard-form__group--select-date {/* 親要素*/
+/* width: 100%; */
+    padding-right: 20px;
+}
+.dashboard-form__input--date {
+    padding: 10px;
+    text-align: center;
+    width: 170px;
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 17px;
+        line-height: 100%;
+        letter-spacing: 0%;
+
+        letter-spacing: 0;
+        color: #BEB1A6;
+            background-color: #FBFBFB;
+            border: 1px solid #E3DED9;
+
+}
+
+/* .dashboard-form__select--gender {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    font-size: 16px;
+    position: relative;
+} */
+/* カスタム矢印を追加 */
+/* .dashboard-form__select--gender::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #765353;
+    pointer-events: none;
+} */
+
+
+.dashboard-form__group--buttons-1 {/* 親要素*/
+    padding-right: 20px;
+}
+
+.dashboard-form__group--buttons-2 {/* 親要素*/
+    /* padding-right: 20px; */
+}
+
+.dashboard-form__button--search {
+    height: 42px;
+    width: 105px;;
+    /* padding: 5px 20px; */
+    border: 1px solid #8B7969;
+    cursor: pointer;
+    background-color: #82756A;
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #FFFFFF;
+        letter-spacing: 0;
+}
+
+/* ちょっと文字が改行になってしまうから幅を広げた */
+.dashboard-form__button--reset {
+    height: 42px;
+    width: 114px;
+    padding: 4px 20px;
+    border: 1px solid #D9C6B5;
+    cursor: pointer;
+    background-color: #D9C6B5;
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #FFFFFF;
+        letter-spacing: 0;
+}
+
+.dashboard-form__button--search:hover,
+.dashboard-form__button--reset:hover {
+    background-color: #6a5b50;
+    /* ホバー時の色変更 */
+}
+
+.dashboard-table__wrapper {
+    padding: 30px 0 30px 0;
+}
+
+.dashboard-table__info {
+    padding-bottom: 25px;
+}
+
+.dashboard-table__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.dashboard-form__export--button {/* 親要素*/
+    /* padding-right: 900px; */
+
+}
+.dashboard-form__export--button-submit {
+    border: none;
+        padding: 8px 20px 8px 20px;
+        gap: 10px;
+        font-family: "Inika";
+            font-weight: 400;
+            font-style: Regular;
+            /* 元々boldになってるから・・・*/
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #8B7969;
+
+}
+
+.pagination--button {
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        /* 元々boldになってるから・・・*/
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #8B7969;
+        /* padding: 2px 8px 8px 8px; */
+        align-items: center;
+}
+
+.pagination--button button {
+    border: 1px solid #ccc;
+    /* ボタンの境界線 */
+    background-color: #fff;
+    /* 通常の背景色 */
+    color: #6b5b4b;
+    /* テキスト色 */
+    padding: 7px 12px;
+    /* ボタン内側の余白 */
+    cursor: pointer;
+    /* ポインター表示 */
+    font-size: 16px;
+    /* フォントサイズ */
+    border-radius: 5px;
+    /* 角を丸くする */
+}
+
+.dashboard-form__pagination--button {
+    display: flex;
+        justify-content: center;
+        /* 中央揃え */
+        align-items: center;
+        /* 縦方向の整列 */
+        gap: 3px;
+        /* ボタン間のスペース */
+}
+
+/* アクティブなときの色 */
+.pagination--button button.active {
+    background-color: #8B7969;
+    /* アクティブボタンの背景色 */
+    color: #fff;
+    /* アクティブ時のテキスト色 */
+    font-weight: bold;
+    /* 強調表示 */
+}
+
+.pagination--button button:hover {
+    background-color: #ddd;
+    /* ホバー時の背景色 */
+}
+
+.pagination--button {
+    display: flex;
+}
+
+.dashboard-table__table {
+    width: 100%;
+}
+.dashboard-table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid #E0DFDE;
+    height: 570px;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+    border-top: 1px solid #E0DFDE;
+    border-bottom: 1px solid #E0DFDE;
+    border-left: none;
+    border-right: none;
+    padding: 15px 15px 15px 15px;
+    text-align: left;
+}
+
+.dashboard-table td:nth-child(5) {
+    /* text-align: center; */
+}
+
+thead>tr>th {
+    background-color: #8B7969;
+    font-family: "Inika";
+        font-weight: 700;
+        font-style: Regular;
+        /* 元々boldになってるから・・・*/
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #FFFFFF;
+}
+
+thead > tr > th:first-child {
+    padding-left: 70px;
+}
+
+.dashboard-table tr td:first-child {
+    padding-left: 60px;
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        /* 元々boldになってるから・・・*/
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #8B7969;
+}
+
+.dashboard-table tr td:nth-child(2) {
+    padding-right: 50px;
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #8B7969;
+}
+
+.dashboard-table tr td:nth-child(3) {
+    /* padding-right: 50px; */
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #8B7969;
+}
+
+.dashboard-table tr td:nth-child(4) {
+    padding-right: 100px;
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0%;
+        color: #8B7969;
+}
+
+.details-button {
+    border: 1px solid rgba(217, 198, 181, 0.6);
+    padding: 8px 20px 8px 20px;
+    color: #D9C6B5;
+
+}
+
+
+

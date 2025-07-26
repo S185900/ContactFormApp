@@ -1,0 +1,187 @@
+.font {
+    border: none;
+    width: 530px;
+    padding-left: 10px;
+    font-family: "Inika";
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
+}
+
+h1,
+h2,
+h3 {
+    all: unset;
+}
+
+/* --------- ヘッダーがあるページ共通_＊Group 104 --------- */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #E0DFDE;
+    width: 1512px;
+    height: 100px;
+    max-width: 1509.01px;
+    background-color: #FFFFFF;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1212px;
+    padding-left: 440px;
+}
+
+.header__logo-link {
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    padding-left: 2.99px;
+    color: #8B7969;
+}
+
+.header__logo-text {
+    font-family: "Inika", serif;
+}
+
+/* ---------- タイトルがあるページ共通_Contact, Confirm, Admin, Login, Register?? ---------- */
+main {
+    max-width: 1509.01px;
+    /* --- ＊指定 --- */
+}
+
+.top-ttl {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 100%;
+    /* --- ＊指定(1509.01px) --- */
+    width: 121px;
+    height: 46px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.top-ttl__heading {
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 35px;
+    position: absolute;
+    /* 絶対配置を指定 */
+    /* top: 162px; */
+    top: 170px;
+    /* padding-bottom: 50px; */
+    padding-left: 694px;
+    color: #8B7969;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav--button {
+    width: 100px;
+}
+
+.header__nav--button-submit {
+    width: 100px;
+    padding: 5px 0 5px 0;
+    cursor: pointer;
+
+    background-color: rgba(240, 240, 240, 0.6);
+    border: 1px solid #D9C6B5;
+
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        vertical-align: middle;
+        color: #D9C6B5;
+}
+
+.login-form {
+    max-width: 1183px;
+    position: absolute;
+    top: 264px;
+    left: 388px;
+    text-align: center;
+}
+
+body {
+    background-color: rgba(241, 236, 231, 1);
+}
+
+.login-form__form {
+    width: 736px;
+    height: 579px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid #D9C6B5;
+}
+
+
+/* これは絶対覚えておくこと！！！！ */
+.login-form__table {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: left;
+    width: 445px;
+    height: 300px;
+}
+.login-form__input {
+    width: 100%;
+    height: 55px;
+    padding: 0 0 0 30px;
+}
+
+/* これは絶対覚えておくこと！！！！ */
+.login-form__group--button {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.login-form__submit {
+    border: none;
+    padding: 10px 40px;
+    background-color: rgba(130, 117, 106, 1);
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: rgba(255, 255, 255, 1);
+}
+
+.login-form__group--email-ttl,
+.login-form__group--password-ttl {
+    margin: 10px 10px 15px 0;
+    display: block;
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 25px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #8B7969;
+}

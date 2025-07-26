@@ -218,12 +218,12 @@ td {
     border: none;
     width: 530px;
     padding-left: 10px;
-    font-family: ;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
     color: #8B7969;
 }
 
@@ -236,16 +236,21 @@ table tr:nth-child(8) {
 } */
 
 .textarea {
+    all: unset;
     height: 150px;
     width: 500px;
     border: none;
-    font-family: ;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #8B7969;
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #8B7969;
+    padding-left: 10px;
+    padding-top: 10px;
+    /* font-weight: normal; */
+
 }
 
 .confirm-form__table__header {

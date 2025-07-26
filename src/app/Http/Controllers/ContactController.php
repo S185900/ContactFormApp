@@ -6,20 +6,17 @@ use App\Models\Contact;
 use App\Http\Requests\ContactRequest;
 use Illuminate\Http\Request;
 
-
 class ContactController extends Controller
 {
+
+    // 入力フォーム表示のみ
     public function create()
     {
         return view('contact.home');
     }
 
-    public function con()
-    {
-        return view('contact.confirm');
-    }
 
-
+    // バリデーション
     public function confirm(ContactRequest $request)
     {
 
@@ -118,11 +115,12 @@ class ContactController extends Controller
         return redirect('thanks');
     }
 
-    
-
     public function thanks()
     {
         return view('contact.thanks');
     }
 
 }
+
+
+
