@@ -116,7 +116,8 @@ main {
         color: #D9C6B5;
 }
 
-.login-form {
+.login-form,
+.register-form {
     max-width: 1183px;
     position: absolute;
     top: 264px;
@@ -128,11 +129,13 @@ body {
     background-color: rgba(241, 236, 231, 1);
 }
 
-.login-form__form {
+.login-form__form,
+.register-form__form {
     width: 736px;
     height: 579px;
     background-color: rgba(255, 255, 255, 1);
     border: 1px solid #D9C6B5;
+    border-radius: 10px;
 }
 
 
@@ -146,10 +149,35 @@ body {
     width: 445px;
     height: 300px;
 }
+
+/* register.blade.php専用のスタイル・body class="register-page" */
+.register-page .register-form__table {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: left;
+    width: 445px;
+    height: 398px;
+}
+
 .login-form__input {
     width: 100%;
     height: 55px;
     padding: 0 0 0 30px;
+    background-color: #F4F4F4;
+    border: none
+}
+
+/* 薄い文字のところ */
+.login-form__input::-webkit-input-placeholder {
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #BEB1A6;
 }
 
 /* これは絶対覚えておくこと！！！！ */
@@ -158,6 +186,11 @@ body {
     top: 75%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+/* register.blade.php専用のスタイル・body class="register-page" */
+.register-page .login-form__group--button {
+    top: 82%;
 }
 
 .login-form__submit {
@@ -173,8 +206,7 @@ body {
         color: rgba(255, 255, 255, 1);
 }
 
-.login-form__group--email-ttl,
-.login-form__group--password-ttl {
+.lavel-ttl {
     margin: 10px 10px 15px 0;
     display: block;
     font-family: "Inika";
@@ -185,3 +217,4 @@ body {
         letter-spacing: 0%;
         color: #8B7969;
 }
+

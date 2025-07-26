@@ -44,12 +44,12 @@
                 <table class="login-form__table">
                     <tr>
                         <td>
-                            <label class="login-form__group--email-ttl">メールアドレス</label>
-                                
+                            <label class="lavel-ttl login-form__group--email-ttl">メールアドレス</label>
+
                             <div class="login-form__group login-form__group--email">
-                                <input type="email" id="email" name="email" class="login-form__input" placeholder="例: test@example.com">
+                                <input type="email" id="email" name="email" value="{{ old('email') }}" class="login-form__input" placeholder="例: test@example.com" />
                             </div>
-                            
+
                         </td>
                         <!-- バリデーション:`メールアドレスを入力してください` -->
                                 @error('email')
@@ -58,15 +58,15 @@
                     </tr>
                     <tr>
                         <td>
-                            <label class="login-form__group--password-ttl">パスワード</label>
+                            <label class="lavel-ttl login-form__group--password-ttl">パスワード</label>
                                 <!-- バリデーション:`パスワードを入力してください` -->
                                 @error('password')
                                     <p class="error-password">{{ $message }}</p>
                                 @enderror
                             <div class="login-form__group login-form__group--password">
-                                <input type="password" id="password" name="password" class="login-form__input" placeholder="例: coachtech1106">
+                                <input type="password" id="password" name="password" class="login-form__input" placeholder="例: coachtech1106" />
                             </div>
-                            
+
                         </td>
                         <!-- バリデーション:`メールアドレスを入力してください` -->
                                 @error('email')

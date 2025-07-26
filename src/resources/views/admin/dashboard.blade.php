@@ -69,13 +69,14 @@
                 <!-- ページナンバーのタブ -->
                 <div class="dashboard-form__pagination--button">
                     <div class="pagination--button">
-                    <button class="pagination--button" onclick="goToPage('prev')">&lt;</button>
-                    <button class="pagination--button active" onclick="goToPage(1)">1</button>
-                    <button class="pagination--button" onclick="goToPage(2)">2</button>
-                    <button class="pagination--button" onclick="goToPage(3)">3</button>
-                    <button class="pagination--button" onclick="goToPage(4)">4</button>
-                    <button class="pagination--button" onclick="goToPage(5)">5</button>
-                    <button class="pagination--button" onclick="goToPage('next')">&gt;</button>
+                        <button class="pagination--button" onclick="goToPage('prev')" {{ $contacts->previousPageUrl() ? '' : 'disabled' }}>&lt;</button>
+                        @for ($i = 1; $i <= $contacts->lastPage(); $i++)
+                            <button class="pagination--button {{ $i == $contacts->currentPage() ? 'active' : '' }}" onclick="goToPage({{ $i }})">
+                                {{ $i }}
+                            </button>
+                        @endfor
+                        <button class="pagination--button" onclick="goToPage('next')" {{ $contacts->nextPageUrl() ? '' : 'disabled' }}>&gt;</button>
+                    </div>
                 </div>
 
             </div>
@@ -93,61 +94,27 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($contacts as $contact)
                     <tr>
-                        <td>山田 太郎</td>
-                        <td>男性</td>
-                        <td>test@example.com</td>
-                        <td>商品の交換について</td>
+                        <td>{{ $contact->last_name }} {{ $contact->first_name }}</td>
+                        <td>{{ $contact->gender_text }}</td>
+                        <td>{{ $contact->email }}</td>
+                        <!-- <td>{{ $contact->category_id }}</td> -->
+                        <td>{{ $contact->category_name }}</td>
                         <td><button class="details-button">詳細</button></td>
                     </tr>
-                    <tr>
-                        <td>山田 太郎</td>
-                        <td>男性</td>
-                        <td>test@example.com</td>
-                        <td>商品の交換について</td>
-                        <td><button class="details-button">詳細</button></td>
-                    </tr>
-                    <tr>
-                        <td>山田 太郎</td>
-                        <td>男性</td>
-                        <td>test@example.com</td>
-                        <td>商品の交換について</td>
-                        <td><button class="details-button">詳細</button></td>
-                    </tr>
-                    <tr>
-                        <td>山田 太郎</td>
-                        <td>男性</td>
-                        <td>test@example.com</td>
-                        <td>商品の交換について</td>
-                        <td><button class="details-button">詳細</button></td>
-                    </tr>
-                    <tr>
-                        <td>山田 太郎</td>
-                        <td>男性</td>
-                        <td>test@example.com</td>
-                        <td>商品の交換について</td>
-                        <td><button class="details-button">詳細</button></td>
-                    </tr>
-                    <tr>
-                        <td>山田 太郎</td>
-                        <td>男性</td>
-                        <td>test@example.com</td>
-                        <td>商品の交換について</td>
-                        <td><button class="details-button">詳細</button></td>
-                    </tr>
-                    <tr>
-                        <td>山田 太郎</td>
-                        <td>男性</td>
-                        <td>test@example.com</td>
-                        <td>商品の交換について</td>
-                        <td><button class="details-button">詳細</button></td>
-                    </tr>
-                    <!-- 他の行を追加 -->
+                    @endforeach
                 </tbody>
             </table>
+
+            <!-- 念の為、確認で・・・ -->
+            <div class="pagination-wrapper">
+                {{ $contacts->links() }}
+            </div>
         </div>
     </div>
 
-
+    <!-- モーダルウィンドウ -->
+    
 
 @endsection
