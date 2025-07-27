@@ -1,6 +1,4 @@
 
-
-
 .dashboard-form {
     max-width: 1183px;
     position: absolute;
@@ -55,15 +53,14 @@
     text-align: center;
     width: 90px;
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 17px;
-        line-height: 100%;
-        letter-spacing: 0%;
-
-        color: #BEB1A6;
-            background-color: #FBFBFB;
-            border: 1px solid #E3DED9;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #BEB1A6;
+    background-color: #FBFBFB;
+    border: 1px solid #E3DED9;
 }
 
 .dashboard-form__group--select-categories {/* 親要素*/
@@ -75,16 +72,14 @@
     text-align: center;
     width: 200px;
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 17px;
-        line-height: 100%;
-        letter-spacing: 0%;
-
-        color: #BEB1A6;
-            background-color: #FBFBFB;
-            border: 1px solid #E3DED9;
-
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #BEB1A6;
+    background-color: #FBFBFB;
+    border: 1px solid #E3DED9;
 }
 
 .dashboard-form__group--select-date {/* 親要素*/
@@ -96,19 +91,19 @@
     text-align: center;
     width: 170px;
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 17px;
-        line-height: 100%;
-        letter-spacing: 0%;
-
-        letter-spacing: 0;
-        color: #BEB1A6;
-            background-color: #FBFBFB;
-            border: 1px solid #E3DED9;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    letter-spacing: 0;
+    color: #BEB1A6;
+    background-color: #FBFBFB;
+    border: 1px solid #E3DED9;
 
 }
 
+/* カスタム矢印を追加 */
 /* .dashboard-form__select--gender {
     appearance: none;
     background-color: #fff;
@@ -117,7 +112,7 @@
     font-size: 16px;
     position: relative;
 } */
-/* カスタム矢印を追加 */
+
 /* .dashboard-form__select--gender::after {
     content: '';
     position: absolute;
@@ -149,13 +144,13 @@
     cursor: pointer;
     background-color: #82756A;
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 18px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        color: #FFFFFF;
-        letter-spacing: 0;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    letter-spacing: 0;
 }
 
 /* ちょっと文字が改行になってしまうから幅を広げた */
@@ -167,13 +162,13 @@
     cursor: pointer;
     background-color: #D9C6B5;
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 18px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        color: #FFFFFF;
-        letter-spacing: 0;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    letter-spacing: 0;
 }
 
 .dashboard-form__button--search:hover,
@@ -183,7 +178,7 @@
 }
 
 .dashboard-table__wrapper {
-    padding: 30px 0 30px 0;
+    padding: 30px 0 0px 0;
 }
 
 .dashboard-table__info {
@@ -203,57 +198,48 @@
 }
 .dashboard-form__export--button-submit {
     border: none;
-        padding: 8px 20px 8px 20px;
-        gap: 10px;
-        font-family: "Inika";
-            font-weight: 400;
-            font-style: Regular;
-            /* 元々boldになってるから・・・*/
-            font-size: 18px;
-            line-height: 100%;
-            letter-spacing: 0%;
-            color: #8B7969;
-
+    padding: 8px 20px 8px 20px;
+    gap: 10px;
+    font-family: "Inika";
+    font-weight: 400;
+    font-style: Regular;
+    /* 元々boldになってるから・・・*/
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
 }
+
 
 .pagination--button {
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        /* 元々boldになってるから・・・*/
-        font-size: 18px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        color: #8B7969;
-        /* padding: 2px 8px 8px 8px; */
-        align-items: center;
-}
-
-.pagination--button button {
+    font-weight: 400;
+    font-style: Regular;
+    /* 元々boldになってるから・・・*/
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
+    /* padding: 2px 8px 8px 8px; */
+    align-items: center;
+    width: 150px;
     border: 1px solid #ccc;
-    /* ボタンの境界線 */
     background-color: #fff;
-    /* 通常の背景色 */
-    color: #6b5b4b;
-    /* テキスト色 */
-    padding: 7px 12px;
-    /* ボタン内側の余白 */
+    color: #6b5b4b
+    padding: 7px 50px;
     cursor: pointer;
-    /* ポインター表示 */
     font-size: 16px;
-    /* フォントサイズ */
     border-radius: 5px;
-    /* 角を丸くする */
+    width: 200px;
+    height: 50px;
 }
 
 .dashboard-form__pagination--button {
-    display: flex;
-        justify-content: center;
-        /* 中央揃え */
-        align-items: center;
-        /* 縦方向の整列 */
-        gap: 3px;
-        /* ボタン間のスペース */
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    width: 200px;
+    height: 34px;
 }
 
 /* アクティブなときの色 */
@@ -261,7 +247,6 @@
     background-color: #8B7969;
     /* アクティブボタンの背景色 */
     color: #fff;
-    /* アクティブ時のテキスト色 */
     font-weight: bold;
     /* 強調表示 */
 }
@@ -277,6 +262,7 @@
 
 .dashboard-table__table {
     width: 100%;
+    padding-bottom: ;
 }
 .dashboard-table {
     width: 100%;
@@ -319,53 +305,52 @@ thead > tr > th:first-child {
 .dashboard-table tr td:first-child {
     padding-left: 60px;
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        /* 元々boldになってるから・・・*/
-        font-size: 20px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        color: #8B7969;
+    font-weight: 400;
+    font-style: Regular;
+    /* 元々boldになってるから・・・*/
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
 }
 
 .dashboard-table tr td:nth-child(2) {
     padding-right: 50px;
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 20px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        color: #8B7969;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
 }
 
 .dashboard-table tr td:nth-child(3) {
     /* padding-right: 50px; */
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 20px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        color: #8B7969;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
 }
 
 .dashboard-table tr td:nth-child(4) {
     padding-right: 100px;
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 18px;
-        line-height: 28px;
-        letter-spacing: 0%;
-        color: #8B7969;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: #8B7969;
 }
 
 .details-button {
     border: 1px solid rgba(217, 198, 181, 0.6);
     padding: 8px 20px 8px 20px;
     color: #D9C6B5;
-
 }
 
 

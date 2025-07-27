@@ -1,5 +1,6 @@
 /* モーダルウィンドウ */
 
+
 .modal-table__wrapper {
     position: absolute;
     top: 66px;
@@ -12,9 +13,9 @@
 
 .modal-form__table {
     position: absolute;
-        top: 13%;
-        left: 50%;
-        transform: translateX(-50%);
+    top: 13%;
+    left: 50%;
+    transform: translateX(-50%);
     margin: auto;
     text-align: left;
     border: none;
@@ -22,7 +23,6 @@
     width: 580px;
     align-items: center;
 }
-
 
 .modal-form__table__value {
     width: 55%;
@@ -46,12 +46,12 @@
     border: none;
     padding: 8px 20px 8px 20px;
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 18px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        color: #FFFFFF;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
 }
 
 .model-form__delete--submit:hover {
@@ -61,55 +61,56 @@
     /* ホバー時の文字色 */
     transform: translateY(-3px);
     /* ボタンを少し浮かせる */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 6px rgba(255, 81, 81, 0.2);
     /* 軽い影を追加 */
 }
 
-th, .modal-form__table__header {
+th,
+.modal-form__table__header {
     padding-top: 7px;
 }
 
 .modal-form__table__header {
     /* padding: 8px 20px 8px 20px; */
-        font-family: "Inika";
-        font-weight: 700;
-        font-style: bold;
-        font-size: 20px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        color: #8B7969;
-        width: 30%;
+    font-family: "Inika";
+    font-weight: 700;
+    font-style: bold;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
+    width: 30%;
 }
 
 .input {
     padding: 0px 20px 35px 20px;
-        font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 20px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        color: #8B7969;
+    font-family: "Inika";
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
     width: 95%;
     border: none;
-        /* 枠線を消す */
-        outline: none;
-        /* フォーカス時の枠線も消す */
+    /* 枠線を消す */
+    outline: none;
+    /* フォーカス時の枠線も消す */
 }
 
 .textarea {
     padding: 15px 20px 30px 20px;
-        font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 20px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        color: #8B7969;
-        border: none;
-            /* 枠線を消す */
-            outline: none;
-            /* フォーカス時の枠線も消す */
+    font-family: "Inika";
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
+    border: none;
+    /* 枠線を消す */
+    outline: none;
+    /* フォーカス時の枠線も消す */
 
 }
 
@@ -123,21 +124,23 @@ th, .modal-form__table__header {
     border: 1px solid #8B7969;
     border-radius: 50%;
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 30px;
-        line-height: 85%;
-        letter-spacing: 0%;
-        color: #8B7969;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 30px;
+    line-height: 85%;
+    letter-spacing: 0%;
+    color: #8B7969;
     align-items: center;
     background-color: #FFFFFF;
+        position: absolute;
+            left: 750px;
+            top: 20px;
 }
+
 .close-button:hover {
     background-color: #917a7a;
-    /* ホバー時の背景色を変更 */
     color: black;
-    /* ホバー時のテキスト色を変更 */
     transform: scale(1.1);
-    /* ホバー時に少し拡大する効果を追加 */
 }
+
 

@@ -101,10 +101,8 @@ main {
     width: 100px;
     padding: 5px 0 5px 0;
     cursor: pointer;
-
     background-color: rgba(240, 240, 240, 0.6);
     border: 1px solid #D9C6B5;
-
     font-family: "Inika";
         font-weight: 400;
         font-style: Regular;
@@ -172,12 +170,12 @@ body {
 /* 薄い文字のところ */
 .login-form__input::-webkit-input-placeholder {
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 14px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        color: #BEB1A6;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #BEB1A6;
 }
 
 /* これは絶対覚えておくこと！！！！ */
@@ -198,37 +196,37 @@ body {
     padding: 10px 40px;
     background-color: rgba(130, 117, 106, 1);
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 20px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(255, 255, 255, 1);
 }
 
 .label-ttl {
     margin: 10px 10px 15px 0;
     display: block;
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 25px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        color: #8B7969;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
 }
 
 .lavel-ttl-4,
 .lavel-ttl-5 {
     margin: 10px 10px 20px 0;
-        display: block;
-        font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 25px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        color: #8B7969;
+    display: block;
+    font-family: "Inika";
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8B7969;
 }
 
 /* 無理やり・・・ */
@@ -263,12 +261,12 @@ body {
     top: 417px;
     left: 150px;
     font-family: "Inika";
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 16px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        color: rgb(232, 120, 120);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgb(232, 120, 120);
 }
 
 .error-message-4 {

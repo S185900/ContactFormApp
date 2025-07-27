@@ -1,7 +1,8 @@
 
 # アプリケーション名： お問い合わせフォーム
-FashionablyLateサービスのお問い合わせフォーム。
+FashionablyLate販売サービスのお問い合わせフォーム。
 社内管理者のユーザー認証機能を搭載したアプリです。
+社内管理用に「ContactFormApp」という仮の名称をつけております。
 
 1. フロントエンド入力機能
    - 入力フォームは、お名前（姓・名）、性別、お問い合わせ種類、メール、電話番号、住所などを分けて入力。
@@ -27,8 +28,9 @@ FashionablyLateサービスのお問い合わせフォーム。
 
 3. アプリケーションの起動:
    - 開発環境用URL: `http://localhost/`
-   - データベース用URL: `http://localhost:8080/`
 
+## URL
+- データベース用URL: `http://localhost:8080/`
 
 ## 使用技術（実行環境）
 - Laravel 10.x
@@ -53,6 +55,7 @@ FashionablyLateサービスのお問い合わせフォーム。
 # ER図
 ![ER Diagram](image.png)
 ./src/resources/ContactFormApp.drawio.png
+　※カラム名は単数形にしております
 
 # Tree図
 ```
@@ -65,6 +68,7 @@ views
 │   ├── thanks.blade.php  [サンクスページ]
 ├── admin
 │   ├── admin.blade.php  [管理画面]
+    └── app.blade.php  [モーダルウィンドウ]
 ├── auth
 │   ├── register.blade.php  [ユーザ登録ページ]
 │   ├── login.blade.php  [ログインページ]
@@ -119,14 +123,21 @@ views
 
 ## ダミーデータ格納済み
 1. `contacts` テーブル：
-   - ダミーデータ35件を作成（ファクトリを使用）。
+   - ダミーデータ35件を作成（ファクトリを使用）
 2. `categories` テーブル：
-   - 以下のデータをシーダーで登録：
+   - 以下のデータ5件を登録（シーダーで登録）
      - 商品のお届けについて
      - 商品の交換について
      - 商品トラブル
      - ショップへのお問い合わせ
      - その他
+3. `users` テーブル：
+   - テスト用ダミーユーザーを1名登録（tinkerで登録）
+   - \App\Models\User::create([
+    'name' => 'Test User',
+    'email' => 'test@example.com',
+    'password' => bcrypt('password123'),
+
 
 ## トラブルシューティング
 

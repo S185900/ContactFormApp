@@ -24,14 +24,13 @@ Route::get('/', [ContactController::class, 'create'])->name('back.to.contact.hom
 // 管理画面のアクション一式
 Route::get('/admin', [AdminController::class, 'getContacts']);
 Route::get('/admin/search', [AdminController::class, 'search'])->name('admin.search');
-// Route::post('/admin/search', [AdminController::class, 'search'])->name('admin.search');
+Route::get('/adimin/modal/info', [AdminController::class, 'getContacts'])->name('admin.modal'); // モーダルウィンドウ
 
 // 登録画面・ログイン画面のアクションたち
 Route::post('/register', [UserController::class, 'store'])->name('admin.dashboard');
 Route::post('/login', [UserController::class, 'login'])->name('admin.dashboard');
 
-// モーダルウィンドウ
-Route::view('/modal', 'layouts.modal');
+
 
 // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 // 大ビンチ！fortifyでデフォルトルートが表示されなくなってしまった？(/login, /register)
@@ -39,6 +38,10 @@ Route::view('/modal', 'layouts.modal');
 Route::view('/login', 'auth.login');
 Route::view('/register', 'auth.register');
 
+// Route::view('/modal', 'layouts.modal');
+// Route::view('/modal-2', 'layouts.modal-2');
+
+// Route::post('/admin/search', [AdminController::class, 'search'])->name('admin.search');
 // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 // セッション用
 // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
@@ -53,15 +56,15 @@ Route::get('/contact/home', [ContactController::class, 'home'])->name('contact.h
 Route::match(['GET', 'POST'], '/contact/confirm', [ContactController::class, 'confirm'])->name('contact.confirm');
 
 
-
-
 // コントローラのこと：ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 // 制作中はエラー回避のため先に実装しないこと！！！）
 
 // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 // ビュー制作用（単純にブラウザに表示するだけ）
 // 上記で同じページへのルーティングが発生したらエラー回避のため下記は消すこと！！！）
-    Route::view('/modal', 'layouts.modal');
+Route::view('/modal', 'admin.modal');
+// モーダルウィンドウ確認用
+// Route::view('/admin/modal', 'admin.new-modal');
 // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 
 

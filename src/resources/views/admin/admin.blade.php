@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="{{ asset('css/common.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    <!-- <link rel="stylesheet" href="{{ asset('css/modal.css') }}"> -->
 @endsection
 
 
@@ -13,6 +14,7 @@
             Admin
         </h1>
     </div>
+
     <div class="dashboard-form">
         <form class="dashboard-form__form" action="{{ route('admin.search') }}" method="get">
         <!-- <form class="dashboard-form__form" action="/admin/search" method="post"> -->
@@ -69,12 +71,17 @@
                 <!-- ページナンバーのタブ -->
                 <div class="dashboard-form__pagination--button">
                     <div class="pagination--button">
-                        <button class="pagination--button" onclick="goToPage('prev')" {{ $contacts->previousPageUrl() ? '' : 'disabled' }}>&lt;</button>
+                        <a href="{{ $contacts->previousPageUrl() }}" class="pagination-button {{ $contacts->previousPageUrl() ? '' : 'disabled' }}">
+                            &lt;
+                        </a>
                         @for ($i = 1; $i <= $contacts->lastPage(); $i++)
-                            <button class="pagination--button {{ $i == $contacts->currentPage() ? 'active' : '' }}" onclick="goToPage({{ $i }})">
+                            <a href="{{ $contacts->url($i) }}" class="pagination-button {{ $i == $contacts->currentPage() ? 'active' : '' }}">
                                 {{ $i }}
-                            </button>
+                            </a>
                         @endfor
+                        <a href="{{ $contacts->nextPageUrl() }}" class="pagination-button {{ $contacts->nextPageUrl() ? '' : 'disabled' }}">
+                            &gt;
+                        </a>
                         <button class="pagination--button" onclick="goToPage('next')" {{ $contacts->nextPageUrl() ? '' : 'disabled' }}>&gt;</button>
                     </div>
                 </div>
@@ -101,26 +108,34 @@
                         <td>{{ $contact->email }}</td>
                         <!-- <td>{{ $contact->category_id }}</td> デバッグ用-->
                         <td>{{ $contact->category_name }}</td>
-                        <td><button class="details-button">詳細</button></td>
+
+                        <!-- 詳細ボタン（モーダル開くトリガー） -->
+                        <!-- エラーになるから後で -->
+
+                        <td><button class="details-button" id="modal" onclick="openModal(this)" type="hide">詳細</button></td>
+
+
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-            <form method="POST" action="{{ route('logout') }}">
+
+            <!-- <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <button type="submit">ログアウト</button>
-            </form>
+            </form> -->
 
             <!-- 念の為、確認で・・・ -->
-            <div class="pagination-wrapper">
+            <!-- <div class="pagination-wrapper">
                 {{ $contacts->links() }}
-            </div>
-            
+            </div> -->
         </div>
     </div>
 
-    <!-- モーダルウィンドウ -->
-    
+
+<!------------------ モーダル召喚のid実装（label,css display: none）予定 ----------------------->
+<!-- modal.blade.phpを継承もできそう？ -->
+<!-- コントローラでもできそう？ -->
 
 @endsection
 

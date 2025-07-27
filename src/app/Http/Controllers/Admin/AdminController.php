@@ -33,7 +33,7 @@ class AdminController extends Controller
         }
 
         // categories も定義するために追加
-        // 'category_name'わかりやすく入れておくと良いらしい
+        // 'category_name'わかりやすく入れておく
         $categories = [
             ['category_id' => 1, 'category_name' => '商品のお届けについて'],
             ['category_id' => 2, 'category_name' => '商品の交換について'],
@@ -56,7 +56,6 @@ class AdminController extends Controller
 
         // dd($request->all());
         // dd('Start'); // 開始時点でデバッグ
-        
 
         $categories = Category::all();
 
@@ -68,10 +67,6 @@ class AdminController extends Controller
             ->categorySearch($request->category_id)
             ->keywordSearch($request->keyword)
             ->get();
-
-        
-
-        
 
         // カテゴリー名の定義
         $categories = [

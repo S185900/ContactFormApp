@@ -17,73 +17,70 @@
 <body>
 
 
+    <!-- モーダル召喚のid実装 -->
+    <div id="" class="modal-table__wrapper">
 
-
-
-
-
-<div class="modal-table__wrapper">
         <!-- モーダルトリガー -->
-        <label for="modal-open" class="close-button">
+        <!-- <label for="" class="modal-close__button"> -->
             <button class="close-button-submit" type="submit">×</button>
-        </label>
+        <!-- </label> -->
 
         <!-- モーダル本体 -->
         <div class="modal">
             <div class="modal-content">
                 <!-- 閉じるトリガー -->
-                <label for="modal-open" class="close-button"></label>
+                <!-- <label for="modal-open" class="close-button"></label> -->
 
                 <!-- モーダル内容 -->
-                <form class="modal-form__form" action="/dashboard" method="get">
+                <form class="modal-form__form" action="{{ route('admin.modal') }}" method="get">
                     @csrf
                     <table class="modal-form__table">
                         <tr class="modal-form__table__row">
                             <th class="modal-form__table__header">お名前</th>
                             <td class="modal-form__table__value">
-                                <input class="input" type="text" name="name" value="山田 太郎" readonly />
+                                <input class="input" type="text" name="name" value="{{ $contact['name'] }}" readonly />
                             </td>
                         </tr>
                         <tr class="modal-form__table__row">
                             <th class="modal-form__table__header">性別</th>
                             <td class="modal-form__table__value">
-                                <input class="input" type="text" name="gender" value="性別" readonly />
+                                <input class="input" type="text" name="gender" value="{{ $contact['gender'] }}">{{ $contact['gender_name'] }} readonly />
                             </td>
                         </tr>
                         <tr class="modal-form__table__row">
                             <th class="modal-form__table__header">メールアドレス</th>
                             <td class="modal-form__table__value">
-                                <input class="input" type="email" name="email" value="メールアドレス" readonly />
+                                <input class="input" type="email" name="email" value="{{ $contact['email'] }}" readonly />
                             </td>
                         </tr>
                         <tr class="modal-form__table__row">
                             <th class="modal-form__table__header">電話番号</th>
                             <td class="modal-form__table__value">
-                                <input class="input" type="tel" name="tel" value="電話番号" readonly />
+                                <input class="input" type="tel" name="tel" value="{{ $contact['tel'] }}" readonly />
                             </td>
                         </tr>
                         <tr class="modal-form__table__row">
                             <th class="modal-form__table__header">住所</th>
                             <td class="modal-form__table__value">
-                                <input class="input" type="text" name="address" value="住所" readonly />
+                                <input class="input" type="text" name="address" value="{{ $contact['address'] }}" readonly />
                             </td>
                         </tr>
                         <tr class="modal-form__table__row">
                             <th class="modal-form__table__header">建物名</th>
                             <td class="modal-form__table__value">
-                                <input class="input" type="text" name="building" value="建物名" readonly />
+                                <input class="input" type="text" name="building" value="{{ $contact['building'] }}" readonly />
                             </td>
                         </tr>
                         <tr class="modal-form__table__row">
                             <th class="modal-form__table__header">お問い合わせの種類</th>
                             <td class="modal-form__table__value">
-                                <input class="input" type="text" name="category_id" value="お問い合わせの種類" readonly />
+                                <input class="input" type="text" name="category_id" value="{{ $category['category_id'] }}">{{ $category['category_name'] }}" readonly />
                             </td>
                         </tr>
                         <tr class="modal-form__table__row">
                             <th class="modal-form__table__header">お問い合わせ内容</th>
                             <td class="modal-form__table__value">
-                                <textarea class="textarea" name="detail" rows="5" wrap="soft" readonly>お問い合わせ内容</textarea>
+                                <textarea class="textarea" name="detail" value="{{ $contact['detail'] }}" rows="5" wrap="soft" readonly>お問い合わせ内容</textarea>
                             </td>
                         </tr>
                     </table>

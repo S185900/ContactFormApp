@@ -29,6 +29,7 @@ class ContactRequest extends FormRequest
             'gender' => 'required|integer|in:1,2,3', // 1:男性, 2:女性, 3:その他
             'email' => 'required|email|max:255',
 
+            // 日本の電話番号の組み合わせ調べる
             'tel.part1' => 'required|numeric|digits_between:2,5', // 089-333-4444・07-1111-1111・090-4444-3333対応
             'tel.part2' => 'required|numeric|digits_between:2,5', // 089-333-4444・07-1111-1111・090-4444-3333対応
             'tel.part3' => 'required|numeric|digits_between:3,5', // 089-333-4444・07-1111-1111・090-4444-3333対応
