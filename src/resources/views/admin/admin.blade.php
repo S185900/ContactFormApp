@@ -10,48 +10,48 @@
 @section('main')
     <div class="top-ttl">
         <h1 class="top-ttl__heading">
-            Admin　テスト
+            Admin
         </h1>
     </div>
     <div class="dashboard-form">
-        <form class="dashboard-form__form" action="/" method="post">
+        <form class="dashboard-form__form" action="{{ route('admin.search') }}" method="get">
+        <!-- <form class="dashboard-form__form" action="/admin/search" method="post"> -->
             @csrf
             <div class="dashboard-form__group dashboard-form__group--input-text">
-                <input class="input" type="text" name="" value="" placeholder="名前やメールアドレスを入力してください" />
+                <input class="input" type="text" name="name_email_search" value="" placeholder="名前やメールアドレスを入力してください" />
             </div>
 
+
             <div class="dashboard-form__group dashboard-form__group--select-gender">
-                <select id="category_id" name="gender" class="dashboard-form__select--gender" >
+                <select id="gender" name="gender" class="dashboard-form__select--gender" >
                     <option value="" disabled selected class="select-form-placeholder">性別</option>
                     <option value="1">男性</option>
                     <option value="2">女性</option>
                     <option value="3">その他</option>
+                    <option value="all">全て</option>
                 </select>
             </div>
 
             <div class="dashboard-form__group dashboard-form__group--select-categories">
-                <select id="category_id" name="category_id" class="dashboard-form__select--categories" >
-                    <option value="" disabled selected class="select-form-placeholder">お問い合わせの種類</option>
-                    <option value="1">商品のお届けについて</option>
-                    <option value="2">商品の交換について</option>
-                    <option value="3">商品トラブル</option>
-                    <option value="4">ショップへのお問い合わせ</option>
-                    <option value="5">その他</option>
+                <select name="category_id" id="category_id" class="dashboard-form__select--categories">
+                    <!-- public function getContacts() -->
+                    <!-- Route::get('/admin', [AdminController::class, 'getContacts']); -->
+                    <option value="" disabled selected class="select-form-placeholder">お問い合わせの種類</
+                        @foreach ($categories as $category)
+                            <option value="{{ $category['category_id'] }}">{{ $category['category_name'] }}</option>
+                        @endforeach
                 </select>
             </div>
 
             <div class="dashboard-form__group dashboard-form__group--select-date">
-                <lavel class="dashboard-form__label" ></label>
-                <input class="dashboard-form__input--date"
-                    type="date" 
-                    id="search-date" 
-                    name="search_date" 
-                >
+                <input  type="date" name="date" value="年/月/日" id="created_at" class="dashboard-form__input--date">
             </div>
 
             <div class="dashboard-form__group dashboard-form__group--buttons-1">
                 <button type="submit" class="dashboard-form__button dashboard-form__button--search">検索</button>
             </div>
+
+            <!-- formの中にあれば勝手にリセットしてくれる -->
             <div class="dashboard-form__group dashboard-form__group--buttons-2">
                 <button type="reset" class="dashboard-form__button dashboard-form__button--reset">リセット</button>
             </div>
@@ -99,7 +99,7 @@
                         <td>{{ $contact->last_name }} {{ $contact->first_name }}</td>
                         <td>{{ $contact->gender_text }}</td>
                         <td>{{ $contact->email }}</td>
-                        <!-- <td>{{ $contact->category_id }}</td> -->
+                        <!-- <td>{{ $contact->category_id }}</td> デバッグ用-->
                         <td>{{ $contact->category_name }}</td>
                         <td><button class="details-button">詳細</button></td>
                     </tr>

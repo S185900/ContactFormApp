@@ -25,9 +25,10 @@
             </div>
             <div class="header__nav--button">
                 <button class="header__nav--button-submit" type='submit' 
-                    onclick=\"window.location.href='/register'">
+                    onclick="window.location.href='/register'">
                     Register
                 </button>
+            <!-- Fortifyの設定がすでに/registerのルートを処理しているので、特別な追加修正不要 -->
             </div>
         </div>
     </header>
@@ -44,7 +45,7 @@
                 <table class="login-form__table">
                     <tr>
                         <td>
-                            <label class="lavel-ttl login-form__group--email-ttl">メールアドレス</label>
+                            <label class="lavel-ttl-4 login-form__group--email-ttl">メールアドレス</label>
 
                             <div class="login-form__group login-form__group--email">
                                 <input type="email" id="email" name="email" value="{{ old('email') }}" class="login-form__input" placeholder="例: test@example.com" />
@@ -53,30 +54,27 @@
                         </td>
                         <!-- バリデーション:`メールアドレスを入力してください` -->
                                 @error('email')
-                                    <p class="error-message">{{ $message }}</p>
+                                    <p class="error-message-4">{{ $message }}</p>
                                 @enderror
                     </tr>
                     <tr>
                         <td>
-                            <label class="lavel-ttl login-form__group--password-ttl">パスワード</label>
-                                <!-- バリデーション:`パスワードを入力してください` -->
-                                @error('password')
-                                    <p class="error-password">{{ $message }}</p>
-                                @enderror
+                            <label class="lavel-ttl-5 login-form__group--password-ttl">パスワード</label>
                             <div class="login-form__group login-form__group--password">
                                 <input type="password" id="password" name="password" class="login-form__input" placeholder="例: coachtech1106" />
                             </div>
 
                         </td>
-                        <!-- バリデーション:`メールアドレスを入力してください` -->
-                                @error('email')
-                                    <p class="error-message">{{ $message }}</p>
+                        <!-- バリデーション:`パスワードを入力してください` -->
+                                @error('password')
+                                    <p class="error-message-5">{{ $message }}</p>
                                 @enderror
                     </tr>
                 </table>
                 <div class="login-form__group login-form__group--button">
                     <button class="login-form__submit" type="submit">ログイン</button>
                 </div>
+                
 
             </form>
 

@@ -254,7 +254,7 @@ table tr:nth-child(8) {
 }
 
 .confirm-form__table__header {
-    font-family: ;
+    font-family: "Inika";
     font-weight: 400;
     font-style: Regular;
     font-size: 20px;
@@ -289,20 +289,18 @@ table tr:nth-child(8) {
     display: inline-block;
     padding: 10px 40px 10px 40px;
     gap: 10px;
-
-    font-family: ;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #FFFFFF;
-
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    background-color: #82756A;
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
-    /* color: #8B7969; */
-    background-color: #82756A;
+    color: #FFFFFF;
+    
     border: none;
     border-radius: 3px;
     font-size: 16px;
@@ -310,19 +308,25 @@ table tr:nth-child(8) {
 }
 
 .confirm-form__submit-edit {
+    position: absolute;
+    top: 630px;
+    left: 840px;
     padding: 10px 40px 10px 40px;
     gap: 10px;
-    font-family: ;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    color: #8B7969;
     text-decoration: underline solid;
     text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
-    color: #8B7969;
+    text-underline-offset: 7px;
+    border: none;
+    background-color: #FFFFFF;
 }
+
 
 
 /* ---------- Thank youページ_サンクスページ ---------- */
@@ -347,14 +351,14 @@ table tr:nth-child(8) {
     position: absolute;
     width: 1381px;
     height: auto;
-    top: -20%;
+    top: -50%;
     left: 50%;
     transform: translate(-50%, -50%); /* 中央に移動 */
     font-family: "Inika", serif;
     font-weight: 400;
     font-style: Regular;
     /* font-size: 280px; */
-    font-size: 250px;
+    font-size: 280px;
     line-height: 100%;
     letter-spacing: 0%;
     color: rgba(139, 121, 105, 0.05);
@@ -395,7 +399,7 @@ table tr:nth-child(8) {
     border-radius: 5px;
     cursor: pointer;
     position: absolute;
-    top: 60%;
+    top: 67%;
     left: 50%;
     transform: translate(-50%, -50%);
     /* 完全に中央に揃える */

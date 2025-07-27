@@ -31,12 +31,12 @@ class FortifyServiceProvider extends ServiceProvider
         // 新規ユーザの登録処理
         Fortify::createUsersUsing(CreateNewUser::class);
 
-        // GETメソッドで/registerにアクセスしたときに表示するviewファイル(今回どこからgetになる？)
+        // GETメソッドで/registerにアクセスしたときに表示するviewファイル
         Fortify::registerView(function () {
         return view('auth.register');
         });
 
-        // GETメソッドで/loginにアクセスしたときに表示するviewファイル(今回どこからgetになる？)
+        // GETメソッドで/loginにアクセスしたときに表示するviewファイル
         Fortify::loginView(function () {
             return view('auth.login');
         });

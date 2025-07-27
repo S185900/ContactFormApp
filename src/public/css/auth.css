@@ -206,7 +206,7 @@ body {
         color: rgba(255, 255, 255, 1);
 }
 
-.lavel-ttl {
+.label-ttl {
     margin: 10px 10px 15px 0;
     display: block;
     font-family: "Inika";
@@ -218,3 +218,81 @@ body {
         color: #8B7969;
 }
 
+.lavel-ttl-4,
+.lavel-ttl-5 {
+    margin: 10px 10px 20px 0;
+        display: block;
+        font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 25px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #8B7969;
+}
+
+/* 無理やり・・・ */
+.error-message-1 {
+    position: absolute;
+    top: 152px;
+    left: 150px;
+    font-family: "Inika";
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgb(232, 120, 120);
+}
+
+.error-message-2 {
+    position: absolute;
+    top: 283px;
+    left: 150px;
+    font-family: "Inika";
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgb(232, 120, 120);
+}
+
+.error-message-3 {
+    position: absolute;
+    top: 417px;
+    left: 150px;
+    font-family: "Inika";
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: rgb(232, 120, 120);
+}
+
+.error-message-4 {
+    position: absolute;
+    top: 192px;
+    left: 150px;
+    font-family: "Inika";
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgb(232, 120, 120);
+}
+
+.error-message-5 {
+    position: absolute;
+    top: 344px;
+    left: 150px;
+    font-family: "Inika";
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgb(232, 120, 120);
+}

@@ -12,6 +12,10 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
+
+    // fortifyがあるから不要だけど、将来的に何か特別処理したい時のため
+    // fortifyと競合してしまうため、ルーティングの方だけ/login, /register関連は削除しておく
+
     // -------- ログインページ(/login) --------
     public function showLoginForm()
     {

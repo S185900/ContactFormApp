@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Models\Category;
 use App\Http\Requests\ContactRequest;
 use Illuminate\Http\Request;
 
@@ -14,6 +15,7 @@ class ContactController extends Controller
     {
         return view('contact.home');
     }
+
 
 
     // バリデーション
@@ -110,10 +112,33 @@ class ContactController extends Controller
 
         // dd($request->input());
 
+        // session(['contact_data' => $contactData]);
+        // dd(session('contact_data'));
+
         Contact::create($contact);
 
         return redirect('thanks');
     }
+
+    // セッション用
+    public function edit(Request $request)
+    {
+        $formData = $request->all();
+
+        // データをセッションに保存
+        session()->put('form_data', $formData);
+
+        // フォームにリダイレクト
+        return redirect()->route('form.edit')->withInput($formData);
+    }
+
+
+    public function editForm()
+    {
+        // 修正用（編集）ビュー新しく表示してみる？
+        return view('contact.edit');
+    }
+
 
     public function thanks()
     {

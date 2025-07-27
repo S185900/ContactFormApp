@@ -66,18 +66,20 @@
                         </td>
                     </tr>
             </table>
-
             <div class="confirm-form__btn-edit">
                 <div class="confirm-form__button">
                     <button class="confirm-form__submit" type="submit">送信</button>
                 </div>
-                <div class="confirm-form__edit">
-                    <a href="/" class="confirm-form__submit-edit">修正</a>
-                </div>
             </div>
-
-
         </form>
+
+        <!-- セッション用 -->
+        <div class="confirm-form__edit">
+            <form action="{{ route('contact.confirm') }}" method="post" class="confirm-form__form">
+                @csrf
+                <button class="confirm-form__submit-edit" type="submit">修正</button>
+            </form>
+        </div>
     </div>
 
 

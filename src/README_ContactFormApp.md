@@ -1,18 +1,34 @@
 
-# アプリケーション名
-お問い合わせ管理システム
+# アプリケーション名： お問い合わせフォーム
+FashionablyLateサービスのお問い合わせフォーム。
+社内管理者のユーザー認証機能を搭載したアプリです。
+
+1. フロントエンド入力機能
+   - 入力フォームは、お名前（姓・名）、性別、お問い合わせ種類、メール、電話番号、住所などを分けて入力。
+   - **電話番号は半角数字のみ、ハイフンなし**。
+
+2. 確認機能
+   - ユーザー入力を一覧表示し、確認後に送信可能。
+
+3. 検索と管理機能
+   - 管理画面でお問い合わせデータを検索・編集可能（名前や性別でフィルタリング）。
+
+4. サンクス画面
+   - データ送信後に完了画面を表示し、HOMEボタンでトップページに戻る。
 
 ## 環境構築
 1. Dockerを使用した環境構築:
-   - `docker-compose up -d` を実行して、コンテナを起動。
-   - コンテナ内で、`php artisan migrate` を実行し、データベースを初期化。
-   - 必要に応じて `php artisan db:seed` を使用してダミーデータを投入。
+   -  を実行して、コンテナを作成・起動。
+   - コンテナ内で、`php artisan migrate` を実行し、データベースを作成。
+   - 必要に応じて `php artisan db:seed` `php artisan make:factory` を使用してダミーデータを投入。
 
 2. .envファイルの設定:
-   - 必要な環境変数を適切に設定（例：データベース接続情報、APP_KEYの生成など）。
+   - 必要な環境変数を適切に設定
 
 3. アプリケーションの起動:
    - 開発環境用URL: `http://localhost/`
+   - データベース用URL: `http://localhost:8080/`
+
 
 ## 使用技術（実行環境）
 - Laravel 10.x
@@ -20,12 +36,39 @@
 - MySQL 8.x
 - Docker 20.x
 
-## ER図
-以下にER図を挿入してください：
-< - ER図の画像 - >
+| コマンドの一部紹介                           | 説明                                     |
+|------------------------------------|------------------------------------------|
+| docker-compose up -d --build       |  Dockerコンテナ作成・起動
+| docker-compose up -d               | Dockerコンテナ起動(アプリ立ち上げ後実行)
+| docker ps                          | 実行中のコンテナを一覧表示する  |
+| php artisan migrate                | データベースを作成                |
+| php artisan make:controller ControllerName | コントローラーを作成               |
+| php artisan migrate                | データベースのマイグレーションを実行 |
+| php -v                               | PHPのバージョンを確認             |
+| php artisan key:generate | APP_KEYの生成  |
+| php artisan optimize:clear     | キャッシュクリア |
+| composer dump-autoload  | 名前空間とファイルパスの紐付けの自動更新 |
 
-## URL
-- 開発環境: `http://localhost/`
+
+# ER図
+![ER Diagram](image.png)
+./src/resources/ContactFormApp.drawio.png
+
+# Tree図
+```
+views
+├── layout
+│   └── app.blade.php  [共通レイアウト]
+├── contact
+│   ├── home.blade.php  [お問い合わせフォーム入力ページ]
+│   ├── confirm.blade.php  [確認画面]
+│   ├── thanks.blade.php  [サンクスページ]
+├── admin
+│   ├── admin.blade.php  [管理画面]
+├── auth
+│   ├── register.blade.php  [ユーザ登録ページ]
+│   ├── login.blade.php  [ログインページ]
+```
 
 ## ページ一覧
 | ページ名                   | URL          |
@@ -73,21 +116,8 @@
 | created_at| timestamp       |             |          |
 | updated_at| timestamp       |             |          |
 
-## 機能概要
-1. フロントエンド入力機能
-   - 入力フォームは、お名前（姓・名）、性別、お問い合わせ種類、メール、電話番号、住所などを分けて入力。
-   - **電話番号は半角数字のみ、ハイフンなし**。
 
-2. 確認機能
-   - ユーザー入力を一覧表示し、確認後に送信可能。
-
-3. 検索と管理機能
-   - 管理画面でお問い合わせデータを検索・編集可能（名前や性別でフィルタリング）。
-
-4. サンクス画面
-   - データ送信後に完了画面を表示し、HOMEボタンでトップページに戻る。
-
-## ダミーデータ作成
+## ダミーデータ格納済み
 1. `contacts` テーブル：
    - ダミーデータ35件を作成（ファクトリを使用）。
 2. `categories` テーブル：
@@ -98,12 +128,31 @@
      - ショップへのお問い合わせ
      - その他
 
-## 提出ルール
-1. **ルール**:
-   - COACHTECHの教材内言語で開発すること。
-   - 教材閲覧・ネット検索可能。ただし、質問対応は禁止。
+## トラブルシューティング
 
-2. **提出方法**:
-   - GitHubで`main`ブランチにコミットし、[こちらのURL](https://lms.coachtech.site/renewal/user/01jk3m1df0x0tj5hx5w651hmrp/applications/check-test/submission/)から提出。
+>.envが読み込まれない
+キャッシュが残っている場合が原因
 
----
+>php artisan config:clear を実行する
+CSRFトークンが不足
+
+>フォームにCSRFトークンがない場合が原因
+@csrf を追加する
+
+>クラスが見つからない
+名前空間の指定が間違っている
+
+>コード内の namespace を確認する
+404 Not Found
+
+>ルートの定義が間違っている可能性
+routes/web.php を再確認する
+
+>SQLSTATE Connection refused
+データベース接続設定のミス
+
+>.env ファイルで DB_HOST などを確認する
+Permission denied
+
+>ストレージリンクが足りていない
+php artisan storage:link を実行する
