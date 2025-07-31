@@ -34,6 +34,7 @@ Route::post('/login', [UserController::class, 'login'])->name('admin.dashboard')
 
 // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 // 大ビンチ！fortifyでデフォルトルートが表示されなくなってしまった？(/login, /register)
+// Fortify で用意されたルーティングはPOSTの時だけ
 // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 Route::view('/login', 'auth.login');
 Route::view('/register', 'auth.register');

@@ -1,25 +1,23 @@
 
 # アプリケーション名： お問い合わせフォーム
 FashionablyLate販売サービスのお問い合わせフォーム。
-社内管理者のユーザー認証機能を搭載したアプリです。
-社内管理用に「ContactFormApp」という仮の名称をつけております。
+ユーザー認証機能を搭載したアプリです。
+社内管理用に管理画面も搭載、「ContactFormApp」という仮の名称をつけております。
 
 1. フロントエンド入力機能
    - 入力フォームは、お名前（姓・名）、性別、お問い合わせ種類、メール、電話番号、住所などを分けて入力。
-   - **電話番号は半角数字のみ、ハイフンなし**。
 
-2. 確認機能
-   - ユーザー入力を一覧表示し、確認後に送信可能。
-
-3. 検索と管理機能
-   - 管理画面でお問い合わせデータを検索・編集可能（名前や性別でフィルタリング）。
-
-4. サンクス画面
+2. - Fortifyによるユーザー認証機能を搭載（ログイン・登録画面あり）。
    - データ送信後に完了画面を表示し、HOMEボタンでトップページに戻る。
+
+2. 検索と管理機能
+   - 管理画面でお問い合わせデータを検索可能。
+
 
 ## 環境構築
 1. Dockerを使用した環境構築:
-   -  を実行して、コンテナを作成・起動。
+   - SSH のリンクを git cloneしてファイルを複製。
+   - docker-compose up -d --builr を実行して、コンテナを作成・起動。
    - コンテナ内で、`php artisan migrate` を実行し、データベースを作成。
    - 必要に応じて `php artisan db:seed` `php artisan make:factory` を使用してダミーデータを投入。
 
@@ -40,7 +38,7 @@ FashionablyLate販売サービスのお問い合わせフォーム。
 
 | コマンドの一部紹介                           | 説明                                     |
 |------------------------------------|------------------------------------------|
-| docker-compose up -d --build       |  Dockerコンテナ作成・起動
+| docker-compose up -d --build       | Dockerコンテナ作成・起動
 | docker-compose up -d               | Dockerコンテナ起動(アプリ立ち上げ後実行)
 | docker ps                          | 実行中のコンテナを一覧表示する  |
 | php artisan migrate                | データベースを作成                |
@@ -142,28 +140,37 @@ views
 ## トラブルシューティング
 
 >.envが読み込まれない
-キャッシュが残っている場合が原因
+
+   キャッシュが残っている場合が原因
 
 >php artisan config:clear を実行する
-CSRFトークンが不足
+
+   CSRFトークンが不足
 
 >フォームにCSRFトークンがない場合が原因
-@csrf を追加する
+
+   @csrf を追加する
 
 >クラスが見つからない
-名前空間の指定が間違っている
+
+   名前空間の指定が間違っている
 
 >コード内の namespace を確認する
-404 Not Found
+
+   404 Not Found
 
 >ルートの定義が間違っている可能性
-routes/web.php を再確認する
+
+   routes/web.php を再確認する
 
 >SQLSTATE Connection refused
-データベース接続設定のミス
+
+   データベース接続設定のミス
 
 >.env ファイルで DB_HOST などを確認する
-Permission denied
+
+   ermission denied
 
 >ストレージリンクが足りていない
-php artisan storage:link を実行する
+
+   php artisan storage:link を実行する
